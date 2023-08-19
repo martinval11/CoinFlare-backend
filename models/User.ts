@@ -4,7 +4,10 @@ const userSchema = new mongoose.Schema({
   name: String,
   email: String,
   password: String,
-  portfolio: [],
+  portfolio: {
+    type: Array,
+    default: [],
+  },
 });
 
 export default mongoose.model('User', userSchema);

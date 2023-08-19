@@ -13,6 +13,15 @@ router.get('/users', async (_req, res) => {
   }
 });
 
+router.get('/user/:id', async (req, res) => {
+  try {
+    const user = await User.findById(req.params.id);
+    res.send(user);
+  } catch (error) {
+    res.send('Error getting User');
+  }
+});
+
 router.post('/createUser', async (req, res) => {
   try {
     const user = new User(req.body);
