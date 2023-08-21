@@ -12,8 +12,8 @@
 		"morgan": "^1.10.0"
 	},
 	"scripts": {
-		"start": "ts-node index.ts",
-		"dev": "ts-node-dev index.ts"
+		"start": "npx ts-node index.ts",
+		"dev": "npx ts-node-dev index.ts"
 	},
 	"devDependencies": {
 		"@types/body-parser": "^1.19.2",
