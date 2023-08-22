@@ -17,8 +17,8 @@
 		"@types/morgan": "^1.9.4"
 	},
 	"scripts": {
-		"start": "npx ts-node index.ts",
-		"dev": "npx ts-node-dev index.ts"
+		"start": "node build/index.js",
+		"dev": "ts-node-dev index.ts"
 	},
 	"devDependencies": {
 		"ts-node": "^10.9.1",
