@@ -50,7 +50,7 @@ mongoose_1["default"]
     .connect(DB_URI)
     .then(function () {
     app.use((0, express_1.json)());
-    app.use('/api', routes_1["default"]);
+    app.use('/', routes_1["default"]);
     app.listen(PORT);
     console.log("Server running on port ".concat(PORT));
 })["catch"](function (err) {
