@@ -43,7 +43,7 @@ app.use((0, compression_1["default"])());
 app.use((0, morgan_1["default"])('dev'));
 app.use((0, helmet_1["default"])());
 app.use((0, cors_1["default"])({
-    origin: 'https://coinflare.vercel.app/',
+    origin: "*",
     methods: ['GET', 'POST', 'PATCH', 'DELETE']
 }));
 mongoose_1["default"]
