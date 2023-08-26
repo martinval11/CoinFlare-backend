@@ -43,14 +43,14 @@ app.use((0, compression_1["default"])());
 app.use((0, morgan_1["default"])('dev'));
 app.use((0, helmet_1["default"])());
 app.use((0, cors_1["default"])({
-    origin: "*",
+    origin: 'http://localhost:3000',
     methods: ['GET', 'POST', 'PATCH', 'DELETE']
 }));
 mongoose_1["default"]
     .connect(DB_URI)
     .then(function () {
     app.use((0, express_1.json)());
-    app.use('/', routes_1["default"]);
+    app.use('/api', routes_1["default"]);
     app.listen(PORT);
     console.log("Server running on port ".concat(PORT));
 })["catch"](function (err) {
