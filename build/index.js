@@ -32,14 +32,12 @@ var morgan_1 = __importDefault(require("morgan"));
 var cors_1 = __importDefault(require("cors"));
 var mongoose_1 = __importDefault(require("mongoose"));
 var helmet_1 = __importDefault(require("helmet"));
-var compression_1 = __importDefault(require("compression"));
 var dotenv_1 = __importDefault(require("dotenv"));
 var routes_1 = __importDefault(require("./routes"));
 dotenv_1["default"].config();
 var app = (0, express_1["default"])();
 var PORT = (_a = process.env.PORT) !== null && _a !== void 0 ? _a : 5000;
 var DB_URI = (_b = process.env.DB_URI) !== null && _b !== void 0 ? _b : '';
-app.use((0, compression_1["default"])());
 app.use((0, morgan_1["default"])('dev'));
 app.use((0, helmet_1["default"])());
 app.use((0, cors_1["default"])({

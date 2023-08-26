@@ -10,4 +10,4 @@ const userSchema = new mongoose.Schema({
   },
 });
 
-export default mongoose.model('User', userSchema, 'CoinFlare-dev');
+export default mongoose.model('User', userSchema, 'CoinFlare-prod');
