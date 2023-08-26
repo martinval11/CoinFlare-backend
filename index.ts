@@ -3,7 +3,6 @@ import morgan from 'morgan';
 import cors from 'cors';
 import mongoose from 'mongoose';
 import helmet from 'helmet';
-import compression from 'compression';
 import dotenv from 'dotenv';
 
 import router from './routes';
@@ -13,7 +12,6 @@ const app = express();
 const PORT = process.env.PORT ?? 5000;
 const DB_URI = process.env.DB_URI ?? '';
 
-app.use(compression());
 app.use(morgan('dev'));
 app.use(helmet());
 app.use(
